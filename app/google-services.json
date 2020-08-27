@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "397921047138",
+    "firebase_url": "https://harboreye-d4693.firebaseio.com",
+    "project_id": "harboreye-d4693",
+    "storage_bucket": "harboreye-d4693.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397921047138:android:13e543e7092544d38cf73b",
+        "android_client_info": {
+          "package_name": "com.example.harboreye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397921047138-iesq8ptl29j2guqlgvenot2sjuhmsmck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.harboreye",
+            "certificate_hash": "bed48cbd34b6b7b2f1df0088fe459a59af68ca26"
+          }
+        },
+        {
+          "client_id": "397921047138-spm0k1t3cbhgtqi7sq4tf21aaso6vomn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOCH31Qg0ZA0VSx5NvCaVemX7zTblXM5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397921047138-spm0k1t3cbhgtqi7sq4tf21aaso6vomn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

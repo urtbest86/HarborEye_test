@@ -10,5 +10,7 @@
 
     <string name="menu_CCTV">CCTV</string>
     <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_slideshow">Slideshow</string>jmn b
+    <string name="button1_url">https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4</string>
+    <string name="button2_url">https://bestvpn.org/html5demos/assets/dizzy.mp4</string>
 </resources>

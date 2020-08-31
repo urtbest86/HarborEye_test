@@ -14,10 +14,12 @@ import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.ProgressiveMediaSource;
+import com.google.android.exoplayer2.source.hls.HlsMediaSource;
 import com.google.android.exoplayer2.ui.PlayerControlView;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 
 public class LiveVideoActivity extends AppCompatActivity {
@@ -47,8 +49,12 @@ public class LiveVideoActivity extends AppCompatActivity {
 
         playerView.setPlayer(player);
         Intent intent = getIntent();
+       /*
         Uri uri = Uri.parse(intent.getExtras().getString("url"));
-        MediaSource mediaSource = buildMediaSource(uri);
+        MediaSource mediaSource = buildMediaSource(uri);*/
+
+        Uri uri = Uri.parse(getString(R.string.live_url));
+        HlsMediaSource mediaSource = (HlsMediaSource) buildHlsMediaSource(uri);
 
 
         player.prepare(mediaSource, false, false);
@@ -61,6 +67,14 @@ public class LiveVideoActivity extends AppCompatActivity {
         DataSource.Factory dataSourceFactory =
                 new DefaultDataSourceFactory(this,getString(R.string.app_name));
         return new ProgressiveMediaSource.Factory(dataSourceFactory)
+                .createMediaSource(uri);
+    }
+
+    private HlsMediaSource buildHlsMediaSource(Uri uri) {
+
+        DataSource.Factory dataSourceFactory =
+                new DefaultHttpDataSourceFactory(getString(R.string.app_name));
+        return new HlsMediaSource.Factory(dataSourceFactory)
                 .createMediaSource(uri);
     }
 

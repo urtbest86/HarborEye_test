@@ -38,7 +38,6 @@ public class LiveVideoActivity extends AppCompatActivity {
 
         playerView = findViewById(R.id.video_view);
 
-        initializePlayer();
     }
 
     //엑소플레이어 빌드

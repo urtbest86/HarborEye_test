@@ -1,0 +1,6 @@
+{
+  "APIName": "GET_HLS_STREAMING_SESSION_URL",
+  "StreamARN": "arn:aws:kinesisvideo:ap-northeast-2:909499466464:stream/youjin_stream/1598726297770",
+  "StreamName": "youjin_stream",
+  "DataEndpoint": "https://kinesisvideo.ap-northeast-2.amazonaws.com"
+}

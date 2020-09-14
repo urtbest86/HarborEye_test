@@ -1,0 +1,26 @@
+{
+  "Version": "1.0",
+ /* "AccessKeyId": "AKIA5HQTEQLQE5VC6OPF",
+  "SecretAccessKey": "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",*/
+  "CredentialsProvider": {
+    "CognitoIdentity": {
+      "Default": {
+        "PoolId": "ap-northeast-2_jnxvSfKzA",
+        "Region": "ap-northeast-2"
+
+      }
+    }
+  },
+
+  "IdentityManager": {
+    "Default": {}
+  },
+  "CognitoUserPool": {
+    "Default": {
+      "AppClientSecret": "tjhbp9uhlcipt7jv0tk6nagshpoessqi74vqotb9q8mf8fhqn79",
+      "AppClientId": "7qnadbrri2v27g5ho7uo3qga4m",
+      "PoolId": "ap-northeast-2_jnxvSfKzA",
+      "Region": "ap-northeast-2"
+    }
+  }
+}

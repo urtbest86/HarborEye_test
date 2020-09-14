@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
+    android:background="@color/colorWhite"
     android:orientation="vertical">
 
     <TextView
@@ -15,7 +16,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_launcher_foreground"
+        android:background="@drawable/logo_title"
         android:layout_gravity="center"/>
 
     <TextView

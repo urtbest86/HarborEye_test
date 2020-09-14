@@ -5,53 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoadingActivity"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="150dp"/>
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal">
+
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/ic_launcher_foreground"/>
+        android:background="@drawable/logo_title"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="HARBOR EYE"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:textSize="60dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="50dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="10">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:adjustViewBounds="true"
-            android:background="@drawable/anyang_logo"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="도라에몽"
-            android:layout_weight="5"
-            android:textSize="30dp"/>
-    </LinearLayout>
 
 </LinearLayout>

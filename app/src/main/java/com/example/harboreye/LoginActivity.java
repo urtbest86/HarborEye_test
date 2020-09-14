@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.services.kinesisvideoarchivedmedia.AWSKinesisVideoArchivedMedia;
+import com.amazonaws.services.kinesisvideoarchivedmedia.AWSKinesisVideoArchivedMediaClient;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -34,7 +37,7 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
 
         googleButton.setOnClickListener(this);
     }
-
+/*
     //한 번 로그인하면 바로 메인화면으로 가는 거
    @Override
     protected void onStart()
@@ -44,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         updateUI(account);
-    }
+    }*/
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -56,6 +59,9 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
+
+            BasicAWSCredentials credentials=new BasicAWSCredentials("AKIA5HQTEQLQE5VC6OPF","r6MTuhzXNKkIudwvSD87FbFVKBApT/ZTERK1hUUb");
+            AWSKinesisVideoArchivedMedia a=new AWSKinesisVideoArchivedMediaClient(credentials);
         }
     }
 

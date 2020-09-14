@@ -24,6 +24,6 @@ public class LoadingActivity extends AppCompatActivity {
                 startActivity(loading_intent);
                 finish();
             }
-        },3000);
+        },2000);
     }
 }

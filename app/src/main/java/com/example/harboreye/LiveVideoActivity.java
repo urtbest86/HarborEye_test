@@ -153,6 +153,7 @@ public class LiveVideoActivity extends AppCompatActivity {
                     hlsFragmentSelector.withFragmentSelectorType(SERVER_TIMESTAMP);*/
 
 
+
                     getHLSStreamingSessionURLRequest = new GetHLSStreamingSessionURLRequest()
                             .withStreamName("youjin_stream")
                             .withStreamARN("arn:aws:kinesisvideo:ap-northeast-2:909499466464:stream/youjin_stream/1598726297770")

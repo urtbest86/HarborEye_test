@@ -120,73 +120,8 @@ public class LiveVideoActivity extends AppCompatActivity {
         };
 
 ///////////kinesis streams 테스트중///////////
-        class NewRunnable implements Runnable {
-            @Override
-            public void run() {
-                try {
-
-                    awsCredentials = new BasicAWSCredentials(ACCESS_KEY, SECRET_KEY);
-
-                        CognitoCachingCredentialsProvider credentialsProvider = new CognitoCachingCredentialsProvider(
-                                getApplicationContext(),
-                                "ap-northeast-2:ce2f558c-c059-49fa-b0b5-d04793e564ba", // 자격 증명 풀 ID
-                                Regions.AP_NORTHEAST_2 // 리전
-                        );
 
 
-
-                    AWSMobileClient.getInstance().initialize(getApplicationContext(), new Callback<UserStateDetails>() {
-                        @Override
-                        public void onResult(final UserStateDetails details) {
-                            awsKinesisVideoArchivedMediaClient = new AWSKinesisVideoArchivedMediaClient(AWSMobileClient.getInstance());
-                        }
-                        @Override
-                        public void onError(final Exception e) {
-                            e.printStackTrace();
-                        }
-                    });
-                    //awsKinesisVideoArchivedMediaClient = new AWSKinesisVideoArchivedMediaClient(AWSMobileClient.getInstance());
-
-
-
-                    /*hlsFragmentSelector = new HLSFragmentSelector();
-                    hlsFragmentSelector.withFragmentSelectorType(SERVER_TIMESTAMP);*/
-
-
-
-                    getHLSStreamingSessionURLRequest = new GetHLSStreamingSessionURLRequest()
-                            .withStreamName("youjin_stream")
-                            .withStreamARN("arn:aws:kinesisvideo:ap-northeast-2:909499466464:stream/youjin_stream/1598726297770")
-                            .withPlaybackMode(LIVE)
-                            .withDiscontinuityMode(ALWAYS);
-                            //.withMaxMediaPlaylistFragmentResults((long) 5)
-                           // .withExpires(3600);
-                     /*hlsFragmentSelector = new HLSFragmentSelector();
-                    hlsFragmentSelector.withFragmentSelectorType(SERVER_TIMESTAMP);
-                    getHLSStreamingSessionURLRequest.setHLSFragmentSelector(hlsFragmentSelector);*/
-
-                    cc = getHLSStreamingSessionURLRequest.toString();
-
-
-                    //  kinesisVideoAndroidServiceClient=new KinesisVideoAndroidServiceClient(awsCredentials,
-                    //   Region.getRegion(Regions.AP_NORTHEAST_2),kinesisVideoAndroidServiceClient.getDataEndpoint("youjin_stream",GET_HLS_STREAMING_SESSION_URL,NULL,awsCredentialsProvider));
-                   getHLSStreamingSessionURLResult = new GetHLSStreamingSessionURLResult();
-                   getHLSStreamingSessionURLResult=awsKinesisVideoArchivedMediaClient.getHLSStreamingSessionURL(getHLSStreamingSessionURLRequest);
-
-
-                    // getHLSStreamingSessionURLResult=archivedMediaClient.getHLSStreamingSessionURL(getHLSStreamingSessionURLRequest);
-                    // a = getHLSStreamingSessionURLResult.getHLSStreamingSessionURL();
-
-                } catch (Exception e) {
-                    cc = "실패";
-                    e.printStackTrace();
-                }
-                handler.sendEmptyMessage(0);
-            }
-        }
-        NewRunnable newRunnable = new NewRunnable();
-       // Thread thread = new Thread(newRunnable);
-       // thread.start();
     }
 
     //엑소플레이어 빌드
@@ -201,7 +136,7 @@ public class LiveVideoActivity extends AppCompatActivity {
 
 
         Log.i("이니셜", "");
-        Uri uri = Uri.parse(getString(R.string.live_url));
+        Uri uri = Uri.parse(getString(R.string.button2_url));
         HlsMediaSource mediaSource = (HlsMediaSource) buildHlsMediaSource(uri);
 
         player.prepare(mediaSource, false, false);

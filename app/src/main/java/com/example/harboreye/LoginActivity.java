@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
 
         googleButton.setOnClickListener(this);
     }
-/*
+
     //한 번 로그인하면 바로 메인화면으로 가는 거
    @Override
     protected void onStart()
@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         updateUI(account);
-    }*/
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity implements  View.OnClickLis
     }
 
     private void updateUI(GoogleSignInAccount account) {
-        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+        Intent intent = new Intent(getApplicationContext(), crawlingActivity.class);
         startActivity(intent);
         finish();
     }
